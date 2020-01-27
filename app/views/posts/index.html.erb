@@ -4,7 +4,7 @@
   <% if params[:date] == "Today" %>
     <% @posts = Post.where("create_at >=?", Time.zone.today.beginning_of_day) %>
   <% else %>
-    <% @posts = Post.where("create_at <?", Time.zone.today.beginning_of_day) 5>
+    <% @posts = Post.where("create_at <?", Time.zone.today.beginning_of_day) %>
   <% end %>
 <% end %>
 
