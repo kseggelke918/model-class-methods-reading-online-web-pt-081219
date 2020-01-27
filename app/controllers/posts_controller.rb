@@ -4,7 +4,7 @@ class PostsController < ApplicationController
     @authors = Author.all 
     
     if !params[:author].blank?
-      @posts = Post.by_author(author: params[:author])
+      @posts = Post.by_author(params[:author])
     elsif !params[:date].blank?
       if params[:date] == "Today"
         @posts = Post.from_today 
